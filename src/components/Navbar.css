@@ -11,22 +11,24 @@ body {
 
 /* Navbar styles */
 .navbar {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 86px;
     background: #FFFFFF;
     position: relative;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Logo styles */
 .logo {
-    position: absolute;
     width: 150px;
     height: 46px;
-    top: 20px;
-    left: 130px;
-    opacity: 1;
-    transform: rotate(0deg);
+    flex-shrink: 0;
 }
 
 .logo-img {
@@ -37,23 +39,24 @@ body {
 
 /* Search bar styles */
 .search-bar {
-    position: relative;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .search-input {
-    position: absolute;
-    width: 665px;
+    flex: 1;
     height: 40px;
-    top: 22px;
-    left: 326px;
-    opacity: 1;
-    transform: rotate(0deg);
     border: 1px solid #0D6EFD;
     border-radius: 4px;
     padding: 0 16px;
     font-size: 14px;
     outline: none;
     transition: border-color 0.3s ease;
+    min-width: 200px;
 }
 
 .search-input:focus {
@@ -67,18 +70,12 @@ body {
 
 /* Category dropdown styles */
 .category-dropdown {
-    position: absolute;
-    width: 145px;
-    height: 40px;
-    top: 22px;
-    left: 746px;
-    opacity: 1;
-    transform: rotate(0deg);
+    min-width: 120px;
 }
 
 .category-select {
     width: 100%;
-    height: 100%;
+    height: 40px;
     border: 1px solid #0D6EFD;
     border-radius: 4px;
     padding: 0 12px;
@@ -101,13 +98,8 @@ body {
 
 /* Search button styles */
 .search-button {
-    position: absolute;
-    width: 100px;
     height: 40px;
-    top: 22px;
-    left: 891px;
-    opacity: 1;
-    transform: rotate(0deg);
+    min-width: 80px;
     background-color: #0D6EFD;
     color: white;
     border: 1px solid #0D6EFD;
@@ -116,6 +108,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    padding: 0 16px;
 }
 
 .search-button:hover {
@@ -126,4 +119,213 @@ body {
 .search-button:active {
     background-color: #0A58CA;
     border-color: #0A58CA;
+}
+
+/* Icon Section Styles */
+.icon-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* Common vector icon styles */
+.profile-vector-icon,
+.message-vector-icon,
+.order-vector-icon,
+.cart-vector-icon {
+    width: 20px;
+    height: 19px;
+    position: relative;
+    margin: 0 auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+/* Common CSS icon styles */
+.profile-css-icon,
+.message-css-icon,
+.order-css-icon,
+.cart-css-icon {
+    width: 20px;
+    height: 19px;
+    position: relative;
+    margin: 0 auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+/* Profile icon design */
+.profile-css-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #8B96A5;
+    border-radius: 50%;
+}
+
+.profile-css-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 8px;
+    background: #8B96A5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Message icon design */
+.message-css-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 8px;
+    background: #8B96A5;
+    border-radius: 2px;
+}
+
+.message-css-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 4px;
+    height: 4px;
+    background: #8B96A5;
+    border-radius: 50%;
+}
+
+/* Order icon design (heart) */
+.order-css-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 10px;
+    background: #8B96A5;
+    border-radius: 6px 6px 0 0;
+}
+
+.order-css-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #8B96A5;
+    border-radius: 50%;
+}
+
+/* Cart icon design */
+.cart-css-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 6px;
+    background: #8B96A5;
+    border-radius: 2px;
+}
+
+.cart-css-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 4px;
+    background: #8B96A5;
+    border-radius: 2px 2px 0 0;
+}
+
+/* Text styles according to specifications */
+.profile-text,
+.message-text,
+.order-text,
+.cart-text {
+    width: 37px;
+    height: 15px;
+    margin-top: 2px;
+    opacity: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: #8B96A5;
+    background: transparent;
+}
+
+/* Common icon button styles */
+.profile-icon-section,
+.message-icon-section,
+.order-icon-section,
+.cart-icon-section {
+    width: 52px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 4px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.profile-icon-section:hover,
+.message-icon-section:hover,
+.order-icon-section:hover,
+.cart-icon-section:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    transform: translateY(-1px);
+}
+
+.profile-icon-section:active,
+.message-icon-section:active,
+.order-icon-section:active,
+.cart-icon-section:active {
+    transform: translateY(0);
+    background-color: rgba(13, 110, 253, 0.2);
 }

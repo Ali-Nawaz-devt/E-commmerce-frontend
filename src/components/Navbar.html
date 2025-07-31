@@ -25,6 +25,76 @@
             </div>
             <button class="search-button">Search</button>
         </div>
+        <!-- Icon Section Start -->
+        <div class="icon-section">
+            <button class="profile-icon-section" onclick="handleProfileClick()">
+                <div class="profile-vector-icon profile-css-icon"></div>
+                <div class="profile-text">Profile</div>
+            </button>
+            <button class="message-icon-section" onclick="handleMessageClick()">
+                <div class="message-vector-icon message-css-icon"></div>
+                <div class="message-text">Message</div>
+            </button>
+            <button class="order-icon-section" onclick="handleOrderClick()">
+                <div class="order-vector-icon order-css-icon"></div>
+                <div class="order-text">Order</div>
+            </button>
+            <button class="cart-icon-section" onclick="handleCartClick()">
+                <div class="cart-vector-icon cart-css-icon"></div>
+                <div class="cart-text">Cart</div>
+            </button>
+        </div>
+        <!-- Icon Section End -->
     </nav>
+
+    <script>
+        function handleProfileClick() {
+            // You can customize this function to handle profile click
+            console.log('Profile clicked!');
+            alert('Profile section clicked! You can navigate to profile page here.');
+            
+            // Example: Redirect to profile page
+            // window.location.href = '/profile';
+            
+            // Example: Open profile modal
+            // openProfileModal();
+        }
+
+        function handleMessageClick() {
+            // You can customize this function to handle message click
+            console.log('Message clicked!');
+            alert('Message section clicked! You can navigate to messages page here.');
+            
+            // Example: Redirect to messages page
+            // window.location.href = '/messages';
+            
+            // Example: Open messages modal
+            // openMessagesModal();
+        }
+
+        function handleOrderClick() {
+            // You can customize this function to handle order click
+            console.log('Order clicked!');
+            alert('Order section clicked! You can navigate to orders page here.');
+            
+            // Example: Redirect to orders page
+            // window.location.href = '/orders';
+            
+            // Example: Open orders modal
+            // openOrdersModal();
+        }
+
+        function handleCartClick() {
+            // You can customize this function to handle cart click
+            console.log('Cart clicked!');
+            alert('Cart section clicked! You can navigate to cart page here.');
+            
+            // Example: Redirect to cart page
+            // window.location.href = '/cart';
+            
+            // Example: Open cart modal
+            // openCartModal();
+        }
+    </script>
 </body>
 </html>
